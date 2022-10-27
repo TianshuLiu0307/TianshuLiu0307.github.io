@@ -1,0 +1,19 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Jeff's awesome website
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+[google](https://www.google.com/)
+
+
+This is a picture of krab.
+![](./images/krab.jpg)
+
+[about](about.html)

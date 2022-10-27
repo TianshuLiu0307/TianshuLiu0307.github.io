@@ -17,3 +17,7 @@ This is a picture of krab.
 ![](./images/krab.jpg)
 
 [about](about.html)
+
+# New Section!!
+
+[Here's](plotly.html) a page with plotly plots

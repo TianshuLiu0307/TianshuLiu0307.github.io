@@ -13,4 +13,4 @@ navbar:
       href: https://github.com/TianshuLiu0307/
 output:
   html_document:
-    theme: cerulean
+    theme: paper

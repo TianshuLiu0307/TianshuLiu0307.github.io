@@ -3,12 +3,12 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
     - text: "Dashboard"
       href: dashboard.html
+    - text: "Experience"
+      href: experience.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<tl3196@columbia.edu>
     - icon: fa-github fa-lg
       href: https://github.com/TianshuLiu0307/
 output:

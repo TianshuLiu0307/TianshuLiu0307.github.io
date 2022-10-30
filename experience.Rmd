@@ -1,0 +1,29 @@
+---
+title: "Experience"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+<br>
+
+### Academic Experience
+
+#### Columbia University Mailman School of Public Health
+
+##### <em>September 2022 - expected May 2024</em>&nbsp;&nbsp;&nbsp;&nbsp;Master of Science in Biostatistics
+<br>
+
+#### Sichuan University
+
+##### <em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Engineering in Software Engineering
+
+##### <em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Natural Science in Biological Sciences
+<br>
+
+### Professional Experience
+
+#### Shanghai Baosight Software Co., Ltd.
+
+##### <em>June 2021 – August 2021</em>&nbsp;&nbsp;&nbsp;&nbsp;Production Data Collection & Analysis Intern (SQL)
+

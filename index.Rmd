@@ -1,23 +1,19 @@
 ---
-title: "Sugar's website"
+title: "Tianshu Liu"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Sugar's awesome website
+# Welcome to my website!
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+ <font size="3">My name is Tianshu, a 1st-year MS student in Biostatistics.
 
-[google](https://www.google.com/)
+This website is created for P8105 course use.
 
+# Know more about me!
 
-This is a picture of krab.
+Click [experience](experience.html) to know more about me!</font>
+
 ![](./images/krab.jpg)
-
-[about](about.html)
-
-# New Section!!
-
-[Here's](plotly.html) a page with plotly plots

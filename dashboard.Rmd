@@ -1,11 +1,13 @@
 ---
-title: "AirBNB Dashboard"
+title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
     source_code: embed
-    theme: paper
+    theme: "paper"
+    navbar:
+      - { title: "Home", href: index.html, align: left }
 ---
 
 ```{r setup, include=FALSE}
@@ -19,35 +21,43 @@ Column {data-width=650}
 -----------------------------------------------------------------------
 
 ```{r, include = FALSE}
-data("nyc_airbnb")
-
-nyc_airbnb  = 
-  nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>% 
-  select(
-    borough = neighbourhood_group, neighbourhood, price, room_type, lat, long, rating
-  ) %>% 
-  filter(
-    borough == "Manhattan",
-    room_type == "Entire home/apt",
-    price %in% 100:500
-  ) %>% 
-  drop_na(rating)
-
+data("ny_noaa")
+ny_noaa = 
+  ny_noaa %>% 
+  mutate(
+    tmin = as.integer(tmin),
+    tmax = as.integer(tmax)
+  )%>% 
+  separate(date,
+           into = c("year", "month", "day"),
+           sep = "-",
+           convert = FALSE,
+           remove = FALSE) %>% 
+  mutate(
+    tmin = tmin / 10,
+    tmax = tmax / 10,
+    prcp = prcp / 10
+  )
 ```
 
 ### Chart A
 
-```{r}
-nyc_airbnb %>% 
-  mutate(
-    text_label = str_c("Price:", price)
+```{r boxplot}
+ny_noaa %>% 
+  filter(id == "USC00300055") %>% 
+  group_by(year, month) %>% 
+  summarise(
+    avg_prcp = mean(prcp)
   ) %>% 
+  mutate(text_label = str_c("Month:", month)) %>% 
   plot_ly(
-    x = ~lat, y = ~long, color = ~price,
-    type = "scatter", mode = "markers", alpha = .5,
+    x = ~year, y = ~avg_prcp, color = ~year,
+    type = "box", colors = "viridis",
     text = ~text_label
-  )
+  ) %>% 
+  layout(title = 'Average Precipitation Monitered by USC00300055',
+         xaxis = list(title = 'Year'),
+         yaxis = list(title = 'Average Precipitation(mm)'))
 ```
 
 Column {data-width=350}
@@ -55,28 +65,42 @@ Column {data-width=350}
 
 ### Chart B
 
-```{r}
-nyc_airbnb %>% 
-  mutate(
-    neighbourhood = fct_reorder(neighbourhood, price)
+```{r scatterplot}
+ny_noaa %>% 
+  drop_na(snow) %>% 
+  group_by(year, month) %>% 
+  summarise(
+    avg_snow = mean(snow)
   ) %>% 
+  mutate(text_label = str_c("Month:", month)) %>% 
   plot_ly(
-    x = ~neighbourhood, y = ~price, color = ~neighbourhood, 
-    type = "box", colors = "viridis"
-  )
+    x = ~year, y = ~avg_snow, color = ~month,
+    type = "scatter", mode = "markers", colors = "viridis",
+    text = ~text_label
+  ) %>% 
+  layout(title = 'Monthly Average Snow Fall',
+         xaxis = list(title = 'Year'),
+         yaxis = list(title = 'Snow Fall (mm)'))
+
+
 ```
 
 ### Chart C
 
-```{r}
-nyc_airbnb %>%
-  count(neighbourhood) %>% 
-  mutate(
-    neighbourhood = fct_reorder(neighbourhood, n)
-  ) %>% 
-  plot_ly(
-    x = ~neighbourhood, y = ~n, 
-    type = "bar"
-  )
+```{r hexplot}
+tmin_vs_tmax = 
+  ny_noaa %>% 
+  drop_na(tmax, tmin) %>% 
+  ggplot(aes(x = tmin, y = tmax)) +
+  geom_hex() +
+  labs(
+    title = "tmax vs. tmin",
+    x = "tmin (°C)",
+    y = "tmax (°C)"
+  ) + 
+  theme_minimal() + 
+  theme(legend.position = "bottom")
+
+ggplotly(tmin_vs_tmax)
 ```
 

@@ -14,6 +14,8 @@ This website is created for P8105 course use.
 
 # Know more about me!
 
-Click [experience](experience.html) to know more about me!</font>
+Click [Experience](experience.html) to know more about me.
+
+CLick [Dashborad](dashboard.html) to see the dashboard for dataset.</font>
 
 ![](./images/krab.jpg)

@@ -18,6 +18,10 @@ output:
 
 <em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Natural Science in Biological Sciences
 
+### Coursework Highlights
+
+Data Mining, Operating System, Software Architecture, Database, Stochastic Process, Statistical Models & Simulations, Bioinformatics, etc.
+
 ### Professional Experience
 
 #### Shanghai Baosight Software Co., Ltd.

@@ -5,25 +5,50 @@ output:
     toc: true
     toc_float: true
 ---
-<br>
 
-### Academic Experience
+### Education
 
 #### Columbia University Mailman School of Public Health
 
-##### <em>September 2022 - expected May 2024</em>&nbsp;&nbsp;&nbsp;&nbsp;Master of Science in Biostatistics
-<br>
+<em>September 2022 - expected May 2024</em>&nbsp;&nbsp;&nbsp;&nbsp;Master of Science in Biostatistics
 
 #### Sichuan University
 
-##### <em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Engineering in Software Engineering
+<em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Engineering in Software Engineering
 
-##### <em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Natural Science in Biological Sciences
-<br>
+<em>September 2018 - June 2022</em>&nbsp;&nbsp;&nbsp;&nbsp;Bachelor of Natural Science in Biological Sciences
 
 ### Professional Experience
 
 #### Shanghai Baosight Software Co., Ltd.
+ 
+##### Production Data Collection & Analysis Intern (SQL)
 
-##### <em>June 2021 – August 2021</em>&nbsp;&nbsp;&nbsp;&nbsp;Production Data Collection & Analysis Intern (SQL)
+<em>June 2021 – August 2021</em>
 
+- Established, improved and tested production data analysis model and online system functions
+- Constructed application theme tables by statistical analyzing target data, which was extracted from massive steel DB2 database, through SQL after comprehending enterprise programming specifications and workflows
+- Contributed business decision support and reflected operations from data visualization and improved reports
+
+### Design Project
+
+#### Sichuan University - Undergraduate Graduation Thesis
+
+##### B Cell Receptor Immune Data Characteristic of SARS-CoV-2 (Python, R)
+
+- Analyzed 52 BCR sequencing samples to explore immune characteristics, such as clonotype, heavy chain V/J gene usage and CDR3 sequence, with MiXCR and VDJTools; Visualized results using Matplotlib and Seaborn
+- Aligned consistent BCR with reported SARS-CoV-2 antibodies; Verified cross-immune reaction with SARS-CoV
+
+#### 2021 Interdisciplinary Contest in Modeling (Meritorious Winner)
+
+##### Towards a Healthy Higher Education System (MATLAB, SPSS)
+
+- Measured and normalized higher education system in different economic status and regions by selected indicators
+- Determined the reflection of selected indicators on high education level by deriving formulas from Entropy Weight Coefficient, Standard Deviation, and CRiteria Importance Through Intercriteria Correlation (CRITIC)
+- Demonstrated effectiveness of suggestions to Mexican government by Analytic Hierarchy Process (AHP)
+
+#### SunCaper Technology
+##### User Portrait Based on Big Data Analysis in Shopping Behavior (Scala, Java, Machine Learning)
+
+- Set up Spark on Linux, filtered and extracted customer, consumption and browsing records from HBase
+- Developed customer tags to characterize shopping behaviors, created a customer segment model and customer-based product-recommendation system to predict purchasing tendencies with K-Means and PCA
